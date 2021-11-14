@@ -1,0 +1,19 @@
+{
+	"name": "gatsby-business-in-build",
+	"version": "0.1.0",
+	"main": "index.js",
+	"description": "Console data business on build.",
+	"author": "Milton Bolonha <mbolonha@studiovisual.com.br>",
+	"keywords": [
+		"gatsby",
+		"gatsby-plugin"
+	],
+	"dependencies": {
+		"gatsby": "^4.1.0"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "echo \"No build script setup\""
+	},
+	"license": "0BSD"
+}
