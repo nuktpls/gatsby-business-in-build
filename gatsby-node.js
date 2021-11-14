@@ -1,11 +1,13 @@
 exports.onPreInit = (_, pluginOptions) =>
 	console.log(`
-	Atomic Theme Build ${pluginOptions.version}
+	GATSBY BUSINESS IN BUILD
 
-	Aplication Name: ${pluginOptions.appName}
-	Autor: ${pluginOptions.author.name} <${pluginOptions.author.email}>
-	Empresa Coautora: ${pluginOptions.businessCoauthor}
-	Projeto: ${pluginOptions.project}
-	Site: ${pluginOptions.siteUrl}
-	Mensagem: ${pluginOptions.message}
+	Application Name: ${pluginOptions.name}
+	Version: ${pluginOptions.version}
+	Developer: ${pluginOptions.developer}
+	Coauthor Business: ${pluginOptions.coauthorBusiness}
+	Project: ${pluginOptions.project}
+	Website: ${pluginOptions.url}
+	Message: ${pluginOptions.message}
+
 	`)

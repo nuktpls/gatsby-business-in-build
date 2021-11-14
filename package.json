@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"main": "index.js",
 	"description": "Console data business on build.",
-	"author": "Milton Bolonha <mbolonha@studiovisual.com.br>",
+	"author": "Edu4Dev <poupaluz@edu4.dev>",
 	"keywords": [
 		"gatsby",
 		"gatsby-plugin"
