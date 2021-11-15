@@ -1,12 +1,25 @@
 {
   "name": "gatsby-business-in-build",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "index.js",
-  "description": "Console data business on build.",
+  "description": "Console data business in build.",
   "author": "Edu4Dev <poupaluz@edu4.dev>",
   "keywords": [
     "gatsby",
-    "gatsby-plugin"
+    "gatsby-plugin",
+    "RÖÖM",
+    "edu4dev",
+    "nüktpls",
+    "instituto organizacionista",
+    "organizacionismo",
+    "javascript",
+    "gatsbyjs",
+    "reactjs",
+    "nuktpls",
+    "nuktpls-cli",
+    "@goshDev",
+    "milton bolonha",
+    "slipknot"
   ],
   "dependencies": {
     "gatsby": "^4.1.0"

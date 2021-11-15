@@ -1,13 +1,13 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  The Business Log - gatsby-plugin
-</h1>
+---
+---
 
-Require business data written on gatsby-config.js
+# Gatsby Business in Build
+
+#### BiB _by [Edu4Dev](https://edu4.dev)_
+
+---
+
+Request business data written on `gatsby-config.js`.
 
 ## 🚀 Quick start
 
@@ -19,85 +19,76 @@ To get started to log data on your build, you can follow these steps:
 npm i gatsby-business-in-build
 ```
 
-If you already have customize your gatsby-config.js, you can use it. Otherwise, you can [create a new gatsby-config.js file](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/) to setting your plugin.
+If you already have customize your `gatsby-config.js`, you can use it. Otherwise, you can [create a new gatsby-config.js file](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/) to setting your plugin.
 
-The prlgin directory structure looks like this:
+## 🧐 What's inside?
+
+This plugin generates the [files Gatsby looks for inside node_modules](https://www.gatsbyjs.com/docs/files-gatsby-looks-for-in-a-plugin/).
+
+/gatsby-business-in-build
+├── gatsby-node.js
+├── index.js
+├── LICENSE(0BSD)
+├── package.json
+└── README.md
+
+The plugin files structure will merge both `gatsby-node` file:
 
 ```text
 /your-gatsby-site
-├── gatsby-config.js
+├── gatsby-node.js
 
 /gatsby-business-in-build
-├── index.js
-├── package.json
-└── README.md
+├── gatsby-node.js
+└── (*.*)
 ```
 
-With `my-gatsby-site` being your Gatsby site, and `my-plugin` being your plugin. You could also include the plugin in your [site's `plugins` folder](https://www.gatsbyjs.com/docs/loading-plugins-from-your-local-plugins-folder/).
+With `your-gatsby-site` being your Gatsby site, the plugin will inject the plugin file "gatsby-node.js" inside your build.
 
-2. Include the plugin in a Gatsby site
+2. Configure the plugin
 
-Inside of the `gatsby-config.js` file of your site (in this case, `my-gatsby-site`), include the plugin in the `plugins` array:
+Inside of the `gatsby-config.js` file of your site (in this case, `your-gatsby-site/gatsby-config.js`, inject the plugin in the `plugins` list:
 
 ```javascript
 module.exports = {
-	plugins: [
-		// other gatsby plugins
-		// ...
-		require.resolve(`../my-plugin`),
-	],
+{
+	resolve: `gatsby-business-in-build`,
+		options: {
+			name: 'Gatsby Business in Build',
+			version: '0.0.0',
+			developer: 'Milton Bolonha',
+			coauthorBusiness: 'Edu4Dev',
+			project: 'Atomic Theme',
+			url: 'https://dominiofinal.com',
+			message: 'Copy not comedy.',
+		},
+	},
 }
 ```
 
-The line `require.resolve('../my-plugin')` is what accesses the plugin based on its filepath on your computer, and adds it as a plugin when Gatsby runs.
-
-_You can use this method to test and develop your plugin before you publish it to a package registry like npm. Once published, you would instead install it and [add the plugin name to the array](https://www.gatsbyjs.com/docs/using-a-plugin-in-your-site/). You can read about other ways to connect your plugin to your site including using `npm link` or `yarn workspaces` in the [doc on creating local plugins](https://www.gatsbyjs.com/docs/creating-a-local-plugin/#developing-a-local-plugin-that-is-outside-your-project)._
-
 3. Verify the plugin was added correctly
 
-The plugin added by the starter implements a single Gatsby API in the `gatsby-node` that logs a message to the console. When you run `gatsby develop` or `gatsby build` in the site that implements your plugin, you should see this message.
-
-You can verify your plugin was added to your site correctly by running `gatsby develop` for the site.
+You can verify your plugin was added to your site correctly by running `gatsby develop` or `gatsby build` for the site.
 
 You should now see a message logged to the console in the preinit phase of the Gatsby build process:
 
 ```shell
 $ gatsby develop
 success open and validate gatsby-configs - 0.033s
-success load plugins - 0.074s
-Loaded gatsby-starter-plugin
-success onPreInit - 0.016s
-...
+
+		GATSBY BUSINESS IN BUILD
+
+		Aplication Name: Atomic Theme
+		Version: 1.0.0
+		Developer: Milton Bolonha
+		Coauthor Business: Edu4Dev
+		Project: Gatsby Business in Build
+		Website: https://www.npmjs.com/package/gatsby-business-in-build
+		Mensage: Copy not comedy.
+
+(...)
+
 ```
-
-4. Rename the plugin in the `package.json`
-
-When you clone the site, the information in the `package.json` will need to be updated. Name your plugin based off of [Gatsby's conventions for naming plugins](https://www.gatsbyjs.com/docs/naming-a-plugin/).
-
-## 🧐 What's inside?
-
-This starter generates the [files Gatsby looks for in plugins](https://www.gatsbyjs.com/docs/files-gatsby-looks-for-in-a-plugin/).
-
-```text
-/my-plugin
-├── .gitignore
-├── gatsby-browser.js
-├── gatsby-node.js
-├── gatsby-ssr.js
-├── index.js
-├── LICENSE
-├── package.json
-└── README.md
-```
-
-- **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-- **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-- **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-- **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-- **`index.js`**: A file that will be loaded by default when the plugin is [required by another application](https://docs.npmjs.com/creating-node-js-modules#create-the-file-that-will-be-loaded-when-your-module-is-required-by-another-application0). You can adjust what file is used by updating the `main` field of the `package.json`.
-- **`LICENSE`**: This plugin starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
-- **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the plugin's name, author, etc). This manifest is how npm knows which packages to install for your project.
-- **`README.md`**: A text file containing useful reference information about your plugin.
 
 ## 🎓 Learning Gatsby
 
