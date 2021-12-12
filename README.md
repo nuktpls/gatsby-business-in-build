@@ -1,5 +1,3 @@
----
----
 
 # Gatsby Business in Build
 
@@ -25,12 +23,14 @@ If you already have customize your `gatsby-config.js`, you can use it. Otherwise
 
 This plugin generates the [files Gatsby looks for inside node_modules](https://www.gatsbyjs.com/docs/files-gatsby-looks-for-in-a-plugin/).
 
+```
 /gatsby-business-in-build
 ├── gatsby-node.js
 ├── index.js
 ├── LICENSE(0BSD)
 ├── package.json
 └── README.md
+```
 
 The plugin files structure will merge both `gatsby-node` file:
 
