@@ -11,7 +11,7 @@ Request business data written on `gatsby-config.js`.
 
 To get started to log data on your build, you can follow these steps:
 
-1. Install The Business Log - gatsby-plugin with:
+# Install the plugin:
 
 ```shell
 npm i gatsby-business-in-build
@@ -19,7 +19,29 @@ npm i gatsby-business-in-build
 
 If you already have customize your `gatsby-config.js`, you can use it. Otherwise, you can [create a new gatsby-config.js file](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/) to setting your plugin.
 
-## 🧐 What's inside?
+
+# Configure the plugin
+
+Inside of the `gatsby-config.js` file of your site (in this case, `your-gatsby-site/gatsby-config.js`, inject the plugin in the `plugins` list:
+
+```javascript
+module.exports = {
+{
+	resolve: `gatsby-business-in-build`,
+		options: {
+			name: 'Gatsby Business in Build',
+			version: '0.0.0',
+			developer: 'Milton Bolonha',
+			coauthorBusiness: 'Edu4Dev',
+			project: 'Atomic Theme',
+			url: 'https://dominiofinal.com',
+			message: 'Copy not comedy.',
+		},
+	},
+}
+```
+
+1. 🧐 What's inside?
 
 This plugin generates the [files Gatsby looks for inside node_modules](https://www.gatsbyjs.com/docs/files-gatsby-looks-for-in-a-plugin/).
 
@@ -45,28 +67,7 @@ The plugin files structure will merge both `gatsby-node` file:
 
 With `your-gatsby-site` being your Gatsby site, the plugin will inject the plugin file "gatsby-node.js" inside your build.
 
-2. Configure the plugin
-
-Inside of the `gatsby-config.js` file of your site (in this case, `your-gatsby-site/gatsby-config.js`, inject the plugin in the `plugins` list:
-
-```javascript
-module.exports = {
-{
-	resolve: `gatsby-business-in-build`,
-		options: {
-			name: 'Gatsby Business in Build',
-			version: '0.0.0',
-			developer: 'Milton Bolonha',
-			coauthorBusiness: 'Edu4Dev',
-			project: 'Atomic Theme',
-			url: 'https://dominiofinal.com',
-			message: 'Copy not comedy.',
-		},
-	},
-}
-```
-
-3. Verify the plugin was added correctly
+2. Verify the plugin was added correctly
 
 You can verify your plugin was added to your site correctly by running `gatsby develop` or `gatsby build` for the site.
 
