@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-business-in-build",
-  "version": "0.2.2",
+  "name": "@nuktpls/gatsby-business-in-build",
+  "version": "0.3.0",
   "main": "index.js",
   "description": "Console data business in build.",
   "author": "Edu4Dev <poupaluz@edu4.dev>",
@@ -28,5 +28,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "echo \"No build script setup\""
   },
-  "license": "0BSD"
+  "license": "0BSD",
+  "publishConfig": {
+    "access": "public",
+    "@nuktpls:registry": "https://npm.pkg.github.com"
+  }
 }
