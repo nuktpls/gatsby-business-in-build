@@ -1,6 +1,6 @@
 {
   "name": "gatsby-business-in-build",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "index.js",
   "description": "Console data business in build.",
   "author": "Edu4Dev <poupaluz@edu4.dev>",
